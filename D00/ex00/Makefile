@@ -6,33 +6,32 @@
 #    By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/02 09:41:50 by amoinier          #+#    #+#              #
-#    Updated: 2017/10/02 10:23:37 by amoinier         ###   ########.fr        #
+#    Updated: 2017/10/02 18:12:37 by amoinier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAG =		-Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror
 
-NAME =		megaphone
+NAME = megaphone
 
-SRCS =		megaphone.cpp
+SRCS = megaphone.cpp
 
+OBJS = megaphone.o
 
-OBJS =		$(SRCS:.cpp=.o)
+all: $(NAME)
 
-all: main
-
-main: $(OBJS)
+$(NAME): $(OBJS)
 	clang++ $(FLAG) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
-	clang++ $(FLAG) megaphone.cpp -c
+	clang++ $(FLAG) $(SRCS) -c
 
 clean:
-	rm -f megaphone.o
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: all $(NAME) ofile clean fclean re
+.PHONY: all clean fclean re
 
 re: fclean all

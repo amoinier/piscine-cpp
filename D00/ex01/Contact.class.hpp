@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 10:26:45 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/02 12:10:54 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/02 15:50:59 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ public:
 	~Contact();
 
 	void add(void);
-	void fastprint(void);
-	void totalprint(void);
+	void fastprint(void) const;
+	void totalprint(void) const;
 };
 
 #endif

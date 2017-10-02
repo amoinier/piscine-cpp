@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 10:48:22 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/02 12:33:39 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/02 15:50:54 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,9 @@ void Contact::add(void)
 	return ;
 }
 
-void Contact::fastprint(void)
+void Contact::fastprint(void) const
 {
-	std::cout << "         " << this->index << "|";
+	std::cout << "|         " << this->index << "|";
 	std::cout << reduceString(this->firstname) << "|";
 	std::cout << reduceString(this->lastname) << "|";
 	std::cout << reduceString(this->nickname) << "|" << std::endl;
@@ -92,19 +92,19 @@ void Contact::fastprint(void)
 	return ;
 }
 
-void Contact::totalprint(void)
+void Contact::totalprint(void) const
 {
-	std::cout << this->firstname << std::endl;
-	std::cout << this->lastname << std::endl;
-	std::cout << this->nickname << std::endl;
-	std::cout << this->login << std::endl;
-	std::cout << this->postaladdress << std::endl;
-	std::cout << this->emailaddress << std::endl;
-	std::cout << this->phonenumber << std::endl;
-	std::cout << this->birthdaydate << std::endl;
-	std::cout << this->favoritemeal << std::endl;
-	std::cout << this->underwearcolor << std::endl;
-	std::cout << this->darkestsecret << std::endl;
+	std::cout << "FirstName       : " << this->firstname << std::endl;
+	std::cout << "LastName        : " << this->lastname << std::endl;
+	std::cout << "NickName        : " << this->nickname << std::endl;
+	std::cout << "Login           : " << this->login << std::endl;
+	std::cout << "Postal address  : " << this->postaladdress << std::endl;
+	std::cout << "Email address   : " << this->emailaddress << std::endl;
+	std::cout << "Phone number    : " << this->phonenumber << std::endl;
+	std::cout << "Birthday date   : " << this->birthdaydate << std::endl;
+	std::cout << "Favorite meal   : " << this->favoritemeal << std::endl;
+	std::cout << "Underwear color : " << this->underwearcolor << std::endl;
+	std::cout << "Darkest secret  : " << this->darkestsecret << std::endl;
 
 	return ;
 }
