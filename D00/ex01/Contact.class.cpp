@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 10:48:22 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/02 15:50:54 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/02 18:40:00 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Contact::~Contact(void)
 	return;
 }
 
-std::string reduceString(std::string str)
+static std::string reduceString(std::string str)
 {
 	int size = str.size();
 	std::string space = "";
@@ -44,67 +44,84 @@ std::string reduceString(std::string str)
 	}
 }
 
-void Contact::add(void)
+void Contact::add(int index)
 {
+	this->_index = index;
+
 	std::cout << "First name :" << std::endl;
-	std::getline(std::cin, this->firstname);
+	std::getline(std::cin, this->_firstname);
 
 	std::cout << "Last name :" << std::endl;
-	std::getline(std::cin, this->lastname);
+	std::getline(std::cin, this->_lastname);
 
 	std::cout << "Nickname :" << std::endl;
-	std::getline(std::cin, this->nickname);
+	std::getline(std::cin, this->_nickname);
 
 	std::cout << "Login :" << std::endl;
-	std::getline(std::cin, this->login);
+	std::getline(std::cin, this->_login);
 
 	std::cout << "Postal address :" << std::endl;
-	std::getline(std::cin, this->postaladdress);
+	std::getline(std::cin, this->_postaladdress);
 
 	std::cout << "Email address :" << std::endl;
-	std::getline(std::cin, this->emailaddress);
+	std::getline(std::cin, this->_emailaddress);
 
 	std::cout << "Phone number :" << std::endl;
-	std::getline(std::cin, this->phonenumber);
+	std::getline(std::cin, this->_phonenumber);
 
 	std::cout << "Birthday date :" << std::endl;
-	std::getline(std::cin, this->birthdaydate);
+	std::getline(std::cin, this->_birthdaydate);
 
 	std::cout << "Favorite meal :" << std::endl;
-	std::getline(std::cin, this->favoritemeal);
+	std::getline(std::cin, this->_favoritemeal);
 
 	std::cout << "Underwear color :" << std::endl;
-	std::getline(std::cin, this->underwearcolor);
+	std::getline(std::cin, this->_underwearcolor);
 
 	std::cout << "Darkest secret :" << std::endl;
-	std::getline(std::cin, this->darkestsecret);
+	std::getline(std::cin, this->_darkestsecret);
 
 	return ;
 }
 
 void Contact::fastprint(void) const
 {
-	std::cout << "|         " << this->index << "|";
-	std::cout << reduceString(this->firstname) << "|";
-	std::cout << reduceString(this->lastname) << "|";
-	std::cout << reduceString(this->nickname) << "|" << std::endl;
+	std::cout << "|         " << this->_index << "|";
+	std::cout << reduceString(this->_firstname) << "|";
+	std::cout << reduceString(this->_lastname) << "|";
+	std::cout << reduceString(this->_nickname) << "|" << std::endl;
 
 	return ;
 }
 
 void Contact::totalprint(void) const
 {
-	std::cout << "FirstName       : " << this->firstname << std::endl;
-	std::cout << "LastName        : " << this->lastname << std::endl;
-	std::cout << "NickName        : " << this->nickname << std::endl;
-	std::cout << "Login           : " << this->login << std::endl;
-	std::cout << "Postal address  : " << this->postaladdress << std::endl;
-	std::cout << "Email address   : " << this->emailaddress << std::endl;
-	std::cout << "Phone number    : " << this->phonenumber << std::endl;
-	std::cout << "Birthday date   : " << this->birthdaydate << std::endl;
-	std::cout << "Favorite meal   : " << this->favoritemeal << std::endl;
-	std::cout << "Underwear color : " << this->underwearcolor << std::endl;
-	std::cout << "Darkest secret  : " << this->darkestsecret << std::endl;
+	std::cout << "FirstName       : " << this->_firstname << std::endl;
+	std::cout << "LastName        : " << this->_lastname << std::endl;
+	std::cout << "NickName        : " << this->_nickname << std::endl;
+	std::cout << "Login           : " << this->_login << std::endl;
+	std::cout << "Postal address  : " << this->_postaladdress << std::endl;
+	std::cout << "Email address   : " << this->_emailaddress << std::endl;
+	std::cout << "Phone number    : " << this->_phonenumber << std::endl;
+	std::cout << "Birthday date   : " << this->_birthdaydate << std::endl;
+	std::cout << "Favorite meal   : " << this->_favoritemeal << std::endl;
+	std::cout << "Underwear color : " << this->_underwearcolor << std::endl;
+	std::cout << "Darkest secret  : " << this->_darkestsecret << std::endl;
 
 	return ;
+}
+
+int Contact::getIndex(void)
+{
+	return this->_index;
+}
+
+std::string Contact::getFirstname(void)
+{
+	return this->_firstname;
+}
+
+std::string Contact::getLastname(void)
+{
+	return this->_lastname;
 }

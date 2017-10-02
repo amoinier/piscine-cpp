@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 10:30:27 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/02 14:08:20 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/02 18:33:25 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int main()
 
 		else if (buff == "ADD") {
 			if (nbr < 8) {
-				books[nbr].index = nbr + 1;
-				books[nbr].add();
-				std::cout << books[nbr].firstname << " " << books[nbr].lastname << " has been added." << std::endl;
+				books[nbr].add(nbr + 1);
+				std::cout << books[nbr].getFirstname() << " " << books[nbr].getLastname() << " has been added." << std::endl;
 				nbr++;
 			}
 			else {

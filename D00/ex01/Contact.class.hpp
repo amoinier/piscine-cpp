@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/02 10:26:45 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/02 15:50:59 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/02 18:40:09 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,32 @@ class Contact {
 
 public:
 
-	int			index;
-	std::string firstname;
-	std::string lastname;
-	std::string nickname;
-	std::string login;
-	std::string postaladdress;
-	std::string emailaddress;
-	std::string phonenumber;
-	std::string birthdaydate;
-	std::string favoritemeal;
-	std::string underwearcolor;
-	std::string darkestsecret;
-
 	Contact();
 	~Contact();
 
-	void add(void);
+	void add(int index);
 	void fastprint(void) const;
 	void totalprint(void) const;
+
+	int getIndex(void);
+	std::string getFirstname(void);
+	std::string getLastname(void);
+
+private:
+
+	int			_index;
+	std::string _firstname;
+	std::string _lastname;
+	std::string _nickname;
+	std::string _login;
+	std::string _postaladdress;
+	std::string _emailaddress;
+	std::string _phonenumber;
+	std::string _birthdaydate;
+	std::string _favoritemeal;
+	std::string _underwearcolor;
+	std::string _darkestsecret;
+
 };
 
 #endif
