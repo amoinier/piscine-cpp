@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 09:40:25 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/03 09:42:38 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/04 17:47:41 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,4 @@ void memoryLeak()
 	std::cout << *panthere << std::endl;
 
 	delete panthere;
-}
-
-int main()
-{
-	memoryLeak();
-
-	return 0;
 }

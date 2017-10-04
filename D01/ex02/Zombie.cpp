@@ -6,13 +6,13 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 09:48:01 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/03 10:35:44 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/04 18:56:13 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type)
+Zombie::Zombie(std::string name, std::string type) : _type(type), _name(name)
 {
 	std::cout << "Zombie " << name  << " was created." << std::endl;
 

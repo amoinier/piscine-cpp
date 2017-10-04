@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 18:12:32 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/03 19:00:47 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/04 18:47:20 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ std::string Logger::makeLogEntry(std::string logstr)
 {
 	std::stringstream result;
 
-	result << "[" << now( "%D %I:%M:%S" ) << "] " << logstr;
+	result << "[" << now( "%D %H:%M:%S" ) << "] " << logstr;
 
 	return (result.str());
 }
@@ -48,8 +48,13 @@ void Logger::logToFile(std::string logstr)
 {
 	std::ofstream	ofs(this->_filename, std::ios::app);
 
-	ofs << logstr << std::endl;
-	ofs.close();
+	if (ofs) {
+		ofs << logstr << std::endl;
+		ofs.close();
+	}
+	else {
+		std::cout << "No space disk" << std::endl;
+	}
 
 	return ;
 }
@@ -57,11 +62,11 @@ void Logger::logToFile(std::string logstr)
 void Logger::log(std::string const & dest, std::string const & message)
 {
 	typedef void (Logger::*Func)(std::string message);
-    Func func[3] = {&Logger::logToConsole, &Logger::logToFile};
+    Func func[2] = {&Logger::logToConsole, &Logger::logToFile};
 
-	std::string logString[3] = {"console", "file"};
+	std::string logString[2] = {"console", "file"};
 
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 2; i++) {
 		if (logString[i] == dest) {
 			(this->*func[i])(this->makeLogEntry(message));
 			break ;

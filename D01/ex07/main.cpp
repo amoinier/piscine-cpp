@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 14:41:20 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/03 19:08:44 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/04 18:43:54 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,15 @@ int main(int argc, char const *argv[]) {
 			}
 
 			std::ofstream ofs(name.str());
-			ofs << test;
-			ofs.close();
+			if (ofs) {
+				ofs << test;
+				ofs.close();
+			}
+			else {
+				std::cout << "No space disk" << std::endl;
+			}
 			ifs.close();
+			return (0);
 		}
 		else {
 			std::cout << "File doesn't exists or empty string" << std::endl;

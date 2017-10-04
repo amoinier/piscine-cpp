@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 16:40:36 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/03 18:05:47 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/04 18:46:07 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	Human human;
+	Human human = Human();
 
 	human.action("meleeAttack", "Jimi");
 	human.action("rangedAttack", "Florian");
