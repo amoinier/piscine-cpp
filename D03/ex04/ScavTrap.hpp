@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:11:51 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:16:42 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
   	void challengeNewcomer();
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
-
+	
 protected:
 
 private:

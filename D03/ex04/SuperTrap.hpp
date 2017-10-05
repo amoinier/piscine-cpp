@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:11:51 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 15:45:05 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
 
 # include <iostream>
 # include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
+# include "NinjaTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class SuperTrap : public NinjaTrap, public FragTrap {
 
 public:
 
-  	ScavTrap(std::string name);
-  	ScavTrap(ScavTrap const & src);
-  	~ScavTrap(void);
+  	SuperTrap(std::string name);
+  	SuperTrap(SuperTrap const & src);
+  	~SuperTrap(void);
 
-	ScavTrap& operator=(ScavTrap const & rhs);
+	SuperTrap& operator=(SuperTrap const & rhs);
 
-  	void challengeNewcomer();
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
+	using FragTrap::rangedAttack;
+	using NinjaTrap::meleeAttack;
 
 protected:
 

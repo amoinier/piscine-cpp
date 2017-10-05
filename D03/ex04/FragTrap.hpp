@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:11:51 by amoinier         ###   ########.fr       */
+/*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
+/*   Updated: 2017/10/05 15:15:47 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include <iostream>
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 
 public:
 
-  	ScavTrap(std::string name);
-  	ScavTrap(ScavTrap const & src);
-  	~ScavTrap(void);
+  	FragTrap(std::string name);
+  	FragTrap(FragTrap const & src);
+  	~FragTrap(void);
 
-	ScavTrap& operator=(ScavTrap const & rhs);
+	FragTrap& operator=(FragTrap const & rhs);
 
-  	void challengeNewcomer();
+  	void vaulthunter_dot_exe(std::string const & target);
 	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
-
+  	void meleeAttack(std::string const & target);
+	
 protected:
 
 private:
