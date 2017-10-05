@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 09:46:00 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:45:58 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 18:09:30 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main(void) {
 	SuperTrap	*supertrap = new SuperTrap("Megazord");
 
 	std::cout << std::endl;
+	std::cout << supertrap->getenergyPoints() << std::endl;
 	claptrap->rangedAttack("Jack");
 	std::cout << std::endl;
 	gyrotrap->rangedAttack("Hammerlock");

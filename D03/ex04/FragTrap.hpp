@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:15:47 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 17:31:12 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
 class FragTrap : virtual public ClapTrap {
 
@@ -29,7 +30,7 @@ public:
   	void vaulthunter_dot_exe(std::string const & target);
 	void rangedAttack(std::string const & target);
   	void meleeAttack(std::string const & target);
-	
+
 protected:
 
 private:

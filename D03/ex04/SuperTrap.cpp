@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:38:33 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:45:02 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 18:09:55 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTr
 	this->name = FragTrap::getName();
 	this->hitPoints = FragTrap::gethitPoints();
 	this->maxHitPoints = FragTrap::getmaxHitPoints();
-	this->energyPoints = NinjaTrap::getenergyPoints();
-	this->maxEnergyPoints = NinjaTrap::getmaxEnergyPoints();;
+	this->energyPoints = NinjaTrap::energyPoints;
+	//this->maxEnergyPoints = NinjaTrap::getmaxEnergyPoints();;
 	this->meleeAttackDamage = NinjaTrap::getmeleeAttackDamage();;
 	this->rangedAttackDamage = FragTrap::getrangedAttackDamage();;
 	this->armorDamageReduction = FragTrap::getarmorDamageReduction();;
@@ -51,7 +51,6 @@ SuperTrap::SuperTrap(SuperTrap const & src) : ClapTrap(src.getName()), NinjaTrap
 
 SuperTrap::~SuperTrap(void)
 {
-	std::srand(std::time(NULL) + std::clock());
 	std::cout << "SUPER-TP -- ..." << std::endl;
 
 	return ;

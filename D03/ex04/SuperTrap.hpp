@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 15:45:05 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/05 17:55:11 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,13 @@ public:
 
 	using FragTrap::rangedAttack;
 	using NinjaTrap::meleeAttack;
+	
+	using NinjaTrap::getenergyPoints;
+	using NinjaTrap::getmaxEnergyPoints;
 
 protected:
+	using NinjaTrap::maxEnergyPoints;
+	using NinjaTrap::energyPoints;
 
 private:
 
