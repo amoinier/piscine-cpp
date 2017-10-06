@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 13:54:33 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 15:24:47 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 18:28:50 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void 			Character::setHaveWeapon(bool wep)
 
 void Character::attack(Enemy* enem)
 {
-	if (enem->getHP() > 0) {
+	if (enem && enem != NULL && enem != 0) {
 		if (this->haveWeapon() && this->_pointsAP >= this->_weapon->getAPCost()) {
 			this->setPointAP(this->_pointsAP - this->_weapon->getAPCost());
 			std::cout << this->getName() << " attacks " << enem->getType() << " with a " << this->_weapon->getName() << std::endl;

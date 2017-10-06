@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 11:02:05 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:23:04 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ protected:
 	int armorDamageReduction;
 
 private:
+	ScavTrap(void);
 
 };
 

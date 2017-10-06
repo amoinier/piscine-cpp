@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/05 10:13:52 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:26:52 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ protected:
 	int armorDamageReduction;
 
 private:
+	FragTrap(void);
 
 };
 

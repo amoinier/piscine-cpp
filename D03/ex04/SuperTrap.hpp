@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:34:10 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 09:06:09 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:16:18 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ protected:
 	using NinjaTrap::energyPoints;
 
 private:
+	SuperTrap(void);
 
 };
 

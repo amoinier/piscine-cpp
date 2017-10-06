@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 10:38:33 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 09:06:37 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 17:21:53 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ SuperTrap& SuperTrap::operator=(SuperTrap const & rhs)
 SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTrap(name)
 {
 	this->level = 1;
-	this->name = FragTrap::Name;
+	this->name = FragTrap::name;
 	this->hitPoints = FragTrap::hitPoints;
 	this->maxHitPoints = FragTrap::maxHitPoints;
-	this->energyPoints = NinjaTrap::energyPoints;
-	this->maxEnergyPoints = NinjaTrap::maxEnergyPoints;;
+	this->energyPoints = FragTrap::energyPoints;
+	this->maxEnergyPoints = FragTrap::maxEnergyPoints;
 	this->meleeAttackDamage = NinjaTrap::meleeAttackDamage;;
 	this->rangedAttackDamage = FragTrap::rangedAttackDamage;;
 	this->armorDamageReduction = FragTrap::armorDamageReduction;;
@@ -45,6 +45,15 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTr
 
 SuperTrap::SuperTrap(SuperTrap const & src) : ClapTrap(src.getName()), NinjaTrap(src.getName()), FragTrap(src.getName())
 {
+	this->level = 1;
+	this->name = FragTrap::name;
+	this->hitPoints = FragTrap::hitPoints;
+	this->maxHitPoints = FragTrap::maxHitPoints;
+	this->energyPoints = FragTrap::energyPoints;
+	this->maxEnergyPoints = FragTrap::maxEnergyPoints;
+	this->meleeAttackDamage = NinjaTrap::meleeAttackDamage;;
+	this->rangedAttackDamage = FragTrap::rangedAttackDamage;;
+	this->armorDamageReduction = FragTrap::armorDamageReduction;;
 	std::srand(std::time(NULL) + std::clock());
 	*this = src;
 }
