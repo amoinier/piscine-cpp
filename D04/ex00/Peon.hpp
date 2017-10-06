@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 09:06:12 by amoinier         ###   ########.fr       */
+/*   Created: 2017/10/06 10:49:51 by amoinier          #+#    #+#             */
+/*   Updated: 2017/10/06 12:59:34 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef PEON_HPP
+# define PEON_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
+# include "Victim.hpp"
 
-class FragTrap : virtual public ClapTrap {
+class Peon : public Victim {
 
 public:
+	Peon(std::string name);
+	Peon(Peon const & src);
+	virtual ~Peon(void);
 
-  	FragTrap(std::string name);
-  	FragTrap(FragTrap const & src);
-  	~FragTrap(void);
+	Peon& operator=(Peon const & rhs);
 
-	FragTrap& operator=(FragTrap const & rhs);
-
-  	void vaulthunter_dot_exe(std::string const & target);
-	void rangedAttack(std::string const & target);
-  	void meleeAttack(std::string const & target);
-
-protected:
+	virtual void getPolymorphed(void) const;
 
 private:
+	Peon(void);
 
 };
 

@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Victim.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 09:06:12 by amoinier         ###   ########.fr       */
+/*   Created: 2017/10/06 10:10:41 by amoinier          #+#    #+#             */
+/*   Updated: 2017/10/06 12:59:07 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef VICTIM_HPP
+# define VICTIM_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {
+class Victim {
 
 public:
 
-  	FragTrap(std::string name);
-  	FragTrap(FragTrap const & src);
-  	~FragTrap(void);
+	Victim(std::string name);
+	Victim(Victim const & src);
+	virtual ~Victim(void);
 
-	FragTrap& operator=(FragTrap const & rhs);
+	Victim& operator=(Victim const & rhs);
 
-  	void vaulthunter_dot_exe(std::string const & target);
-	void rangedAttack(std::string const & target);
-  	void meleeAttack(std::string const & target);
+	std::string getName(void) const;
+	virtual void getPolymorphed(void) const;
 
 protected:
+	std::string _name;
 
 private:
+	Victim(void);
 
 };
+
+std::ostream & operator<<(std::ostream & o, Victim const & rhs);
 
 #endif

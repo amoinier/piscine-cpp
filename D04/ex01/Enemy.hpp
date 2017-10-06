@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Enemy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 09:04:30 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 09:06:12 by amoinier         ###   ########.fr       */
+/*   Created: 2017/10/06 13:39:42 by amoinier          #+#    #+#             */
+/*   Updated: 2017/10/06 15:23:37 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef ENEMY_HPP
+# define ENEMY_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {
+class Enemy {
 
 public:
+  Enemy(int hp, std::string const & type);
+  Enemy(Enemy const & src);
+  virtual ~Enemy(void);
 
-  	FragTrap(std::string name);
-  	FragTrap(FragTrap const & src);
-  	~FragTrap(void);
+  Enemy& operator=(Enemy const & rhs);
 
-	FragTrap& operator=(FragTrap const & rhs);
-
-  	void vaulthunter_dot_exe(std::string const & target);
-	void rangedAttack(std::string const & target);
-  	void meleeAttack(std::string const & target);
+  std::string getType() const;
+  int getHP() const;
+  void 			setType(std::string type);
+  void 			setHP(int HP);
+  virtual void takeDamage(int dmg);
 
 protected:
+	int _hitPoints;
+	std::string _type;
 
 private:
-
+	Enemy(void);
 };
 
 #endif
