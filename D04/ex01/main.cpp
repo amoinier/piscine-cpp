@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 14:08:18 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 18:29:42 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 19:33:10 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main()
 	zaz->attack(mutant);
 	zaz->attack(mutant);
 	std::cout << std::endl;
+	zaz->attack(mutant);
 	zaz->attack(scorpion);
 	std::cout << *zaz;
 	zaz->recoverAP();

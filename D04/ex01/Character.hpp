@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 13:53:24 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/06 15:24:43 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/06 19:29:53 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
   void 			setPointAP(int pointsAP);
   void 			setHaveWeapon(bool wep);
   void 			equip(AWeapon* weap);
-  void 			attack(Enemy* enem);
+  void 			attack(Enemy* &enem);
   std::string 	getName() const;
   AWeapon* 		getWeapon() const;
   int 			getPointsAP() const;
