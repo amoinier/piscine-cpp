@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/10 14:26:00 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/10 16:19:58 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/10 17:57:33 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int 		checkInt(std::string str)
 static char 	checkChar(std::string str)
 {
 	if (str.size() == 1) {
-		if (str[0] == '0') {
+		if (isdigit(str[0])) {
 			throw std::bad_exception();
 		}
 		return str[0];
@@ -164,13 +164,13 @@ int main(int argc, char const *argv[])
 {
 	std::string str;
 
-	if (argc == 2 && argv[1]) {
+	if (argc == 2 && argv[1] && static_cast<std::string>(argv[1]) != "") {
 		str = static_cast<std::string>(argv[1]);
 
 		convert(argv[1]);
 	}
 	else {
-		std::cout << "Error with paramter(s)" << std::endl;
+		std::cout << "Error with parameter(s)" << std::endl;
 	}
 
 	return 0;
