@@ -6,11 +6,11 @@
 #    By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/02 09:41:50 by amoinier          #+#    #+#              #
-#    Updated: 2017/10/11 17:55:04 by amoinier         ###   ########.fr        #
+#    Updated: 2017/10/11 18:05:41 by amoinier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAG = -g -Wall -Wextra -Werror -Wno-unused
+FLAG = -g -Wall -Wextra -Werror
 
 NAME = identify
 

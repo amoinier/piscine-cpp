@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 17:33:12 by amoinier          #+#    #+#             */
-/*   Updated: 2017/10/11 17:53:26 by amoinier         ###   ########.fr       */
+/*   Updated: 2017/10/11 18:05:20 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,22 +63,22 @@ void identify_from_pointer( Base * p )
 
 void identify_from_reference( Base & p )
 {
+	A *a = dynamic_cast<A *>(&p);
 
-	try {
-		A &a = dynamic_cast<A &>(p);
+	if (a != NULL) {
 		std::cout << "a" << std::endl;
 	}
-	catch(std::exception & e) {
-		try {
-			B &b = dynamic_cast<B &>(p);
+	else {
+		B *b = dynamic_cast<B *>(&p);
+		if (b != NULL) {
 			std::cout << "b" << std::endl;
 		}
-		catch(std::exception & e) {
-			try {
-				C &c = dynamic_cast<C &>(p);
+		else {
+			C *c = dynamic_cast<C *>(&p);
+			if (c != NULL) {
 				std::cout << "c" << std::endl;
 			}
-			catch(std::exception & e) {
+			else {
 				std::cout << "not found (only Base ?)" << std::endl;
 			}
 		}
